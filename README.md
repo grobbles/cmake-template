@@ -15,7 +15,6 @@ cmake-template/
     │   │   └── ...
     │   └──tests
     │       └── ...
-    ├── setup.py
     ├── run.sh
     ├── LICENSE
     ├── README.md

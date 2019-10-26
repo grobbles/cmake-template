@@ -1,5 +1,7 @@
 set(MODULE_NAME ${PROJECT_NAME})
 project(${MODULE_NAME})
+message("")
+message("MODULE_NAME --> " ${MODULE_NAME})
 
 # Find includes in the build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)

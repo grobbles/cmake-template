@@ -5,10 +5,10 @@ message("MODULE_NAME --> " ${MODULE_NAME})
 
 set(CMAKE_CXX_FLAGS  -pthread)
 
-find_package(Qt5 REQUIRED COMPONENTS Widgets Core)
-
 file(GLOB SOURCES "main.cpp" "*.cpp" "*/*.cpp"  "../main/Module/*.cpp" "../main/Module/*.hpp")
-message("${MODULE_NAME} Sources --> " ${SOURCES})
+foreach(file ${SOURCES})
+    message("${MODULE_NAME} SOURCES FILE = " ${file})
+endforeach()
 
 add_executable(${MODULE_NAME} ${SOURCES})
 

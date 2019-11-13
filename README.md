@@ -4,13 +4,18 @@ CMake-Template
 
 ## Description
 
-A simple c++ program template.
+A simple cmake c++ program template.
 
 ## Project structur
 
 ```
 cmake-template/
-    ├── CMakeTemplate/
+    ├── CMakeExecutableTemplate/
+    │   ├──main
+    │   │   └── ...
+    │   └──tests
+    │       └── ...
+    ├── CMakeStaticLibTemplate/
     │   ├──main
     │   │   └── ...
     │   └──tests

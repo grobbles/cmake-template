@@ -10,7 +10,11 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pthread")
 
 file(GLOB SOURCES "main.cpp" "*.cpp" "*.hpp" "*.h"  "*.ui" "*/*.cpp" "*/*.hpp"  "*/*.ui" "*/*.h")
-message(${SOURCES})
+foreach(file ${SOURCES})
+    message("${MODULE_NAME} SOURCES FILE = " ${file})
+endforeach()
 
 # Tell CMake to create the helloworld executable
 add_executable(${MODULE_NAME} ${SOURCES})
+
+target_link_libraries( ${MODULE_NAME} PRIVATE CMakeStaticLibTemplate )

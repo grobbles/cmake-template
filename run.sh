@@ -1,6 +1,7 @@
 #!/bin/bash
 
-APPLICATION_NAME=CMakeTemplate
+APPLICATION_NAME=CMakeExecutableTemplate
+LIB_NAME=CMakeStaticLibTemplate
 CMAKE=/usr/bin/cmake
 
 ########################################################################################################
@@ -41,6 +42,7 @@ function test() {
     buildAll
 
     ./build/${APPLICATION_NAME}/tests/${APPLICATION_NAME}Tests
+    ./build/${LIB_NAME}/tests/${LIB_NAME}Tests
 }
 
 function start() {

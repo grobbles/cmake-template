@@ -5,7 +5,7 @@ message("MODULE_NAME --> " ${MODULE_NAME})
 
 set(CMAKE_CXX_FLAGS  -pthread)
 
-file(GLOB SOURCES "main.cpp" "*.cpp" "*/*.cpp"  "../main/Module/*.cpp" "../main/Module/*.hpp")
+file(GLOB SOURCES "main.cpp" "*.cpp" "*/*.cpp"  "../main/*/*.cpp" "../main/*/*.hpp")
 foreach(file ${SOURCES})
     message("${MODULE_NAME} SOURCES FILE = " ${file})
 endforeach()

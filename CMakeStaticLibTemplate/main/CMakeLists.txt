@@ -9,19 +9,19 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 # Add a compiler flag
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pthread")
 
-file(GLOB SOURCES "*.cpp" )
+file(GLOB_RECURSE SOURCES "*.cpp" )
 foreach(file ${SOURCES})
     message("${MODULE_NAME} SOURCES FILE = " ${file})
 endforeach()
 
-file(GLOB HEADERS "*.hpp")
+file(GLOB_RECURSE HEADERS "*.hpp")
 foreach(file ${HEADERS})
     message("${MODULE_NAME} HEADERS FILE = " ${file})
 endforeach()
 
 # Tell CMake to create the helloworld executable
 add_library(${MODULE_NAME} STATIC ${SOURCES})
-target_include_directories(${MODULE_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/..)
+target_include_directories(${MODULE_NAME} INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
 
 install(TARGETS ${MODULE_NAME} DESTINATION lib)

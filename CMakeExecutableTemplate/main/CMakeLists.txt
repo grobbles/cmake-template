@@ -9,9 +9,14 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 # Add a compiler flag
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pthread")
 
-file(GLOB SOURCES "main.cpp" "*.cpp" "*.hpp" "*.h"  "*.ui" "*/*.cpp" "*/*.hpp"  "*/*.ui" "*/*.h")
+file(GLOB_RECURSE SOURCES "main.cpp" "*.cpp")
 foreach(file ${SOURCES})
     message("${MODULE_NAME} SOURCES FILE = " ${file})
+endforeach()
+
+file(GLOB_RECURSE HEADERS "*.hpp" "*.h")
+foreach(file ${HEADERS})
+    message("${MODULE_NAME} HEADERS FILE = " ${file})
 endforeach()
 
 # Tell CMake to create the helloworld executable

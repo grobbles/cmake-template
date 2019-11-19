@@ -3,7 +3,7 @@
 #include <string>
 
 #include "Module/Module.hpp"
-#include "main/Math.hpp"
+#include "test/Math.hpp"
 
 using namespace std;
 

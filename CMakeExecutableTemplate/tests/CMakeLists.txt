@@ -12,6 +12,6 @@ endforeach()
 
 add_executable(${MODULE_NAME} ${SOURCES})
 
-target_include_directories(${MODULE_NAME} PRIVATE  ../main/Module/ ../main/SlotExample)
+target_include_directories(${MODULE_NAME} PRIVATE  ../main/Module/ )
 
 target_link_libraries(${MODULE_NAME}  gtest )

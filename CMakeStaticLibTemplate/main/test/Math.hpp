@@ -1,6 +1,4 @@
-
-#ifndef MATH_HPP
-#define MATH_HPP
+#pragma once
 
 #include <set>
 #include <string>
@@ -18,5 +16,3 @@ class Math {
 
     int sub(int x, int y);
 };
-
-#endif // !MATH_HPP

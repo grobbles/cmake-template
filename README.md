@@ -1,41 +1,34 @@
-CMake-Template
-===================
+# 1. CMake-Template
 
+- [1. CMake-Template](#1-cmake-template)
+  - [1.1. Description](#11-description)
+  - [1.2. Project structur](#12-project-structur)
+  - [1.3. Needed tools](#13-needed-tools)
+    - [1.3.1. Install GTest](#131-install-gtest)
+  - [1.4. Start Development](#14-start-development)
+  - [1.5. IDE](#15-ide)
+  - [1.6. Git Workflow](#16-git-workflow)
+  - [1.8. LICENSE](#18-license)
 
-## Description
+## 1.1. Description
 
 A simple cmake c++ program template.
 
-## Project structur
+## 1.2. Project structur
 
-```
-cmake-template/
-    ├── CMakeExecutableTemplate/
-    │   ├──main
-    │   │   └── ...
-    │   └──tests
-    │       └── ...
-    ├── CMakeStaticLibTemplate/
-    │   ├──main
-    │   │   └── ...
-    │   └──tests
-    │       └── ...
-    ├── run.sh
-    ├── LICENSE
-    ├── README.md
-    └── ...
-```
+![Test Picture](.documentation/projectStructur.png)
 
-## Needed tools
+## 1.3. Needed tools
 
--   CMake
--   Make
--   C++ compiler
--   GTest (https://github.com/google/googletest.git)
+- CMake
+- Make
+- C++ compiler
+- GTest (https://github.com/google/googletest.git)
 
-### Install GTest
+### 1.3.1. Install GTest
 
--   checkout this repo "https://github.com/google/googletest.git" and install all with cmake
+- checkout this repo "https://github.com/google/googletest.git" and install all with cmake
+
 ```bash
     git clone https://github.com/google/googletest.git
     cd googletest
@@ -43,7 +36,8 @@ cmake-template/
     make install
 ```
 
--   install this lib with following command "sudo apt-get install libgtest-dev"
+- install this lib with following command "sudo apt-get install libgtest-dev"
+
 ```bash
     sudo apt-get install libgtest-dev
     sudo apt-get install cmake
@@ -55,8 +49,7 @@ cmake-template/
     sudo cp *.a /usr/lib
 ```
 
-
-## Start Development
+## 1.4. Start Development
 
 Checkout this project
 
@@ -78,53 +71,26 @@ To build the project run the scpript with following command
 ```
 
 Execute the program
+
 ```bash
      ./run.sh -s
 ```
 
-## IDE
+## 1.5. IDE
 
 The qt cmake template project is optimized for:
--  visual studio code IDE.
--  qt creator 
 
+- visual studio code IDE.
+- qt creator
 
-## Git Workflow
+## 1.6. Git Workflow
 
--   master branch
--   feature branch
--   bugfix branch
+- master branch
+- feature branch
+- bugfix branch
 
 If you want to add a new feature than create a new branch from master branch and commit your stuff to the branch. If you think you are done than create a merge request.
 
-## Software versioning
-
-It give three segments. "Major version"."Minor version"."Patch version"
-
-1. Major version - incremented for backwards-incompatible changes
-    - Major version must be incremented manually in the 'setup.py' file.
-    - It will be read only the Major version from the file. The other version numbers will be ignore and will be override from script.
-2. Minor version - incremented for new, backwards-compatible functionality is introduced to the API
-    - Minor version will be incremented automatically if a feature branch merged in the master branch.
-3. Patch version - incremented for backwards-compatible bug fixes
-    - Patch version will be incremented automatically if a bugfix branch merged in the master branch.
-
-Example:
-
-```python
-    0.9.0 # merge a bugfix branch
-    0.9.1 # merge a bugfix branch
-    0.9.2 # merge a bugfix branch
-    ...
-    0.9.10
-    0.9.11
-    1.0.0 # the project is in a stable state and can be release.
-    1.0.1 # merge a bugfix branch
-    1.1.0 # merge a feature branch
-    2.0.0 # merge a feature branch with a incompatible API change
-    2.0.1 # merge a bugfix branch
-```
-
-## LICENSE
+## 1.8. LICENSE
 
 MIT License
